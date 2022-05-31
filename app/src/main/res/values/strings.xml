@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">FichasCine</string>
+    <string name="head">Añadir Película</string>
+    <string name="addTitle">Añadir Título</string>
+    <string name="addYear">Selecciona Año</string>
+    <string name="rbSerie">Serie</string>
+    <string name="rbFilm">Película</string>
+    <string name="FilmCover">Carátula</string>
+    <string name="ckSciFi">Sci-Fi</string>
+    <string name="ckThriller">Thriller</string>
+    <string name="ckHumour">Humor</string>
+    <string name="ckChildren">Infantil</string>
+    <string name="ckHorror">Terror</string>
+    <string name="ckAnimation">Animación</string>
+    <string name="ckDrama">Drama</string>
+    <string name="ckSpanish">Español</string>
+    <string name="ckFantasy">Fantasía</string>
+    <string name="ckMusic">Musical</string>
+    <string name="send">Enviar</string>
+    <string name="back">Volver</string>
+</resources>
