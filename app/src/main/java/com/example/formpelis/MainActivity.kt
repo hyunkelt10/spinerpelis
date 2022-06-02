@@ -56,65 +56,71 @@ class MainActivity : AppCompatActivity() {
     }
     fun onCheckBoxClicked(view: View){
         if (view is CheckBox) {
-            val checked: Boolean = view.isChecked
-
-            when (view.id) {
-                R.id.ckChild -> { if (checked) {
-                    checkCategory(b.ckChild.text.toString())
-                } else {
-                    unCheckCategory(b.ckChild.text.toString())
-                }
-                }
-                R.id.ckSciFi -> { if (checked) {
-                    checkCategory(b.ckSciFi.text.toString())
-                } else {
-                    unCheckCategory(b.ckSciFi.text.toString())
-                }
-                }
-                R.id.ckTerror -> { if (checked) {
-                    checkCategory(b.ckTerror.text.toString())
-                } else {
-                    unCheckCategory(b.ckTerror.text.toString())
-                }
-                }
-                R.id.ckThriller -> { if (checked) {
-                    checkCategory(b.ckThriller.text.toString())
-                } else {
-                    unCheckCategory(b.ckThriller.text.toString())
-                }
-                }
-                R.id.ckFantasy -> { if (checked) {
-                    checkCategory(b.ckFantasy.text.toString())
-                } else {
-                    unCheckCategory(b.ckFantasy.text.toString())
-                }
-                }
-                R.id.ckHumour -> { if (checked) {
-                    checkCategory(b.ckHumour.text.toString())
-                } else {
-                    unCheckCategory(b.ckHumour.text.toString())
-                }
-                }
-                R.id.ckAnimation -> { if (checked) {
-                    checkCategory(b.ckAnimation.text.toString())
-                } else {
-                    unCheckCategory(b.ckAnimation.text.toString())
-                }
-                }
-                R.id.ckDrama -> { if (checked) {
-                    checkCategory(b.ckDrama.text.toString())
-                } else {
-                    unCheckCategory(b.ckDrama.text.toString())
-                }
-                }
-                R.id.ckSpanish -> { if (checked) {
-                    checkCategory(b.ckSpanish.text.toString())
-                } else {
-                    unCheckCategory(b.ckSpanish.text.toString())
-                }
-                }
-
+            val ckName = view.text.toString()
+            if (view.isChecked) {
+                if (!cat.contains(ckName)) { cat.add(ckName) }
+            } else {
+                if (cat.contains(ckName)) { cat.remove(ckName) }
             }
+            msj(ckName)
+
+//            when (view.id) {
+//                R.id.ckChild -> { if (checked) {
+//                    checkCategory(b.ckChild.text.toString())
+//                } else {
+//                    unCheckCategory(b.ckChild.text.toString())
+//                }
+//                }
+//                R.id.ckSciFi -> { if (checked) {
+//                    checkCategory(b.ckSciFi.text.toString())
+//                } else {
+//                    unCheckCategory(b.ckSciFi.text.toString())
+//                }
+//                }
+//                R.id.ckTerror -> { if (checked) {
+//                    checkCategory(b.ckTerror.text.toString())
+//                } else {
+//                    unCheckCategory(b.ckTerror.text.toString())
+//                }
+//                }
+//                R.id.ckThriller -> { if (checked) {
+//                    checkCategory(b.ckThriller.text.toString())
+//                } else {
+//                    unCheckCategory(b.ckThriller.text.toString())
+//                }
+//                }
+//                R.id.ckFantasy -> { if (checked) {
+//                    checkCategory(b.ckFantasy.text.toString())
+//                } else {
+//                    unCheckCategory(b.ckFantasy.text.toString())
+//                }
+//                }
+//                R.id.ckHumour -> { if (checked) {
+//                    checkCategory(b.ckHumour.text.toString())
+//                } else {
+//                    unCheckCategory(b.ckHumour.text.toString())
+//                }
+//                }
+//                R.id.ckAnimation -> { if (checked) {
+//                    checkCategory(b.ckAnimation.text.toString())
+//                } else {
+//                    unCheckCategory(b.ckAnimation.text.toString())
+//                }
+//                }
+//                R.id.ckDrama -> { if (checked) {
+//                    checkCategory(b.ckDrama.text.toString())
+//                } else {
+//                    unCheckCategory(b.ckDrama.text.toString())
+//                }
+//                }
+//                R.id.ckSpanish -> { if (checked) {
+//                    checkCategory(b.ckSpanish.text.toString())
+//                } else {
+//                    unCheckCategory(b.ckSpanish.text.toString())
+//                }
+//                }
+//
+//            }
         }
     }
     fun checkCategory(str:String){
