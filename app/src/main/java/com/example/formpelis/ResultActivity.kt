@@ -12,7 +12,7 @@ class ResultActivity : AppCompatActivity() {
         b = ActivityResultBinding.inflate(layoutInflater)
         setContentView(b.root)
         val datos = intent.extras
-        b.tvDatos.text
+
         val str = """   DATOS
             Título: ${datos?.get("TITULO")}
             Año: ${datos?.get("YEAR")}

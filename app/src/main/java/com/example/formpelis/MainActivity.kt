@@ -10,20 +10,24 @@ import com.example.formpelis.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var b:ActivityMainBinding
-    var year = "2000"
-    var tipo = "Serie"
-    var cat = mutableListOf<String>()
+    private var year = "2000"
+    private var tipo = "Serie"
+    private var cat = mutableListOf<String>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         b = ActivityMainBinding.inflate(layoutInflater)
         setContentView(b.root)
+
         getSpinner(b.spYear)
+
         b.rbSerie.setOnClickListener { tipo = "Serie" }
         b.rbPelicula.setOnClickListener { tipo = "Película" }
+
         b.btnSend.setOnClickListener { getAndSend() }
     }
     fun getAndSend(){
         val intentResult = Intent(this, ResultActivity::class.java)
+        //intentResult.putExtra("COVER", b.ivCover.src)
         intentResult.putExtra("TITULO", b.etTitulo.text.toString())
         intentResult.putExtra("YEAR", year)
         intentResult.putExtra("TIPO", tipo)
