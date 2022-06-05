@@ -35,7 +35,6 @@ class MainActivity : AppCompatActivity() {
         startActivity(intentResult)
     }
     fun getSpinner(spinner: Spinner){
-        var userSelect = ""
         val adaptador: ArrayAdapter<*> = ArrayAdapter.createFromResource(this, R.array.Year,
             android.R.layout.simple_spinner_item)
         spinner.adapter = adaptador
@@ -46,17 +45,13 @@ class MainActivity : AppCompatActivity() {
                 position: Int,
                 id: Long
             ) {
-                userSelect = parent?.getItemAtPosition(position).toString()
-                Toast.makeText(this@MainActivity, userSelect, Toast.LENGTH_SHORT).show()
+                year = parent?.getItemAtPosition(position).toString()
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
-                userSelect = "No ha habido selección"
-                Toast.makeText(this@MainActivity, userSelect, Toast.LENGTH_SHORT).show()
+                year = "No ha habido selección"
             }
         }
-        //Sustituir 'year' por la variable global donde se recoge el valor
-        year = userSelect
     }
     fun onCheckBoxClicked(view: View){
         if (view is CheckBox) {
